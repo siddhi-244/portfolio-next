@@ -84,6 +84,18 @@ export const resumeData = {
   ],
   projects: [
     {
+      name: "EduConnect",
+      technologies: ["NextJs, Firebase, TypeScript"],
+      descriptionPoints: [
+        "Developed EduConnect, a real-time class scheduling web app using Next.js, TypeScript, and Firebase, enabling seamless interaction and role-based booking between students and teachers.",
+        "Architected and integrated Firebase Database for dynamic slot management, ensuring instant updates, conflict prevention, and a responsive cross-platform user experience.",
+        "Implemented role-based access control, allowing students to book slots with teachers and teachers to manage their availability, enhancing user experience and system efficiency.",
+      ],
+      githubLink: "https://github.com/siddhi-244/EduConnect", // Example, replace if actual exists
+      liveLink: "https://edu-connect-lac.vercel.app/",
+      dataAiHint: "Calendly for Stduents and Teachers",
+    },
+    {
       name: "ExpenseVue",
       technologies: ["ReactJS"],
       descriptionPoints: [
