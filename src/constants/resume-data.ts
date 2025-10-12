@@ -99,7 +99,7 @@ export const resumeData = {
       name: "ExpenseVue",
       technologies: ["ReactJS"],
       descriptionPoints: [
-        "Engineered a robust expense tracker enabling seamless expense addition and year-based filtering, improving categorization efficiency by 40%.",
+        "Engineered a robust expense tracker enabling seamless expense addition and year-based filtering, improving categorization efficiency.",
         "Implemented visual chart representation for monthly expenses, enhancing data comprehension and visualization.",
       ],
       githubLink: "https://github.com/siddhi-244/ExpenseVue",
