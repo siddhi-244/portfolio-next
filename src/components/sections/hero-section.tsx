@@ -62,10 +62,3 @@ export function HeroSection() {
     </SectionWrapper>
   );
 }
-
-// Add this to your globals.css or a style tag if needed, though tailwind JIT should pick it up
-// @keyframes tilt {
-//   0%, 100% { transform: rotate(0deg); }
-//   50% { transform: rotate(1deg); }
-// }
-// .animate-tilt { animation: tilt 10s infinite linear; }

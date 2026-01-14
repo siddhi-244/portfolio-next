@@ -84,6 +84,15 @@ export const resumeData = {
   ],
   projects: [
     {
+      name: "Calendar App",
+      technologies: ["Java", "Swing", "Design Patterns"],
+      descriptionPoints: [
+        "Implemented a Java calendar application with GUI and CLI support, featuring a finite state machine–based parser for calendar and event commands.",
+        "Integrated parser logic with backend scheduling and Swing UI to support event creation, editing (instance/series), copying, and querying."
+      ],
+      githubLink: "https://github.com/siddhi-244/calendar-app",
+    },
+    {
       name: "EduConnect",
       technologies: ["NextJs, Firebase, TypeScript"],
       descriptionPoints: [
@@ -123,7 +132,7 @@ export const resumeData = {
       institution: "Northeastern University",
       degree: "Master of Science (MS), Computer Science",
       duration: "September 2025 – May 2027",
-      // gpa: "3.8/4",
+      gpa: "4/4",
     },
     {
       institution: "University of Mumbai",
@@ -132,13 +141,13 @@ export const resumeData = {
       gpa : "3.8/4"
     },
   ],
-  technicalSkillsText: "Programming Languages: Kotlin, C++, Javascript, Typescript, Python, PHP, HTML, CSS, Java. Frameworks: Android, Room, Jetpack Compose, Flutter, Bootstrap, JQuery, Express, Dropwizard, SpringBoot, Hibernate, Reactjs, Nodejs, Laravel, Google Cloud Pub/Sub. Databases: MySQL, PostgreSQL, MongoDB, Firebase, SQLLite. Familiar: AWS, Redis, Django, Kafka. Tools: Intellij IDEA, Git, Docker, Postman, Visual Studio Code, Android Studio, CI/CD pipelines. Core Concepts: Object-Oriented Programming, Data Structures and Algorithms, Database Management Systems, Microservices, Low level design, REST APIs.",
+  technicalSkillsText: "Programming Languages: Kotlin, C++, Javascript, Typescript, Python, PHP, Java. Frameworks: Android, Room, Jetpack Compose, Flutter, Bootstrap, JQuery, Express, Dropwizard, SpringBoot, Hibernate, Reactjs, Nodejs, Laravel, Google Cloud Pub/Sub. Databases: MySQL, PostgreSQL, MongoDB, Firebase, SQLLite. Familiar: AWS, Redis, Django, Kafka. Tools: Intellij IDEA, Git, Docker, Postman, Visual Studio Code, Android Studio, CI/CD pipelines. Core Concepts: Object-Oriented Programming, Data Structures and Algorithms, Database Management Systems, Microservices, Low level design, REST APIs.",
   skills: [
     {
       title: "Programming Languages",
       skills: [
         { name: "Kotlin" }, { name: "C++" }, { name: "JavaScript" }, { name: "TypeScript" },
-        { name: "Python" }, { name: "PHP" }, { name: "HTML" }, { name: "CSS" }, { name: "Java" },
+        { name: "Python" }, { name: "PHP" }, { name: "Java" },
       ],
     },
     {
@@ -154,7 +163,7 @@ export const resumeData = {
       title: "Databases",
       skills: [
         { name: "MySQL" }, { name: "PostgreSQL" }, { name: "MongoDB" },
-        { name: "Firebase" }, { name: "SQLite" },
+        { name: "Firebase" }, { name: "SQLite" }, { name: "NoSQL" }
       ],
     },
     {
