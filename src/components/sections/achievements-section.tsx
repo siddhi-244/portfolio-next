@@ -9,14 +9,8 @@ export function AchievementsSection() {
   }
 
   return (
-    <SectionWrapper id="achievements" title="Key Achievements">
+    <SectionWrapper id="achievements" title="Notable Accomplishments">
       <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-primary/5">
-        <CardHeader>
-          <CardTitle className="font-headline text-xl text-primary flex items-center">
-            <Award className="mr-2 h-6 w-6 text-accent" />
-            Notable Accomplishments
-          </CardTitle>
-        </CardHeader>
         <CardContent>
           <ul className="list-disc list-outside space-y-3 pl-5 text-foreground/80">
             {resumeData.achievements.map((achievement, index) => (
