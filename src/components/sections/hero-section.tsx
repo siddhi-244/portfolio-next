@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { resumeData } from '@/constants/resume-data';
-import { Github, Linkedin, Mail, Download, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, ArrowRight, ArrowUp, ArrowUpDown, ArrowDown } from 'lucide-react';
 import { SectionWrapper } from '@/components/ui/section-wrapper';
 
 export function HeroSection() {
@@ -22,8 +22,8 @@ export function HeroSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-accent/30 transition-shadow">
-                <Link href="#contact">
-                  Contact Me <ArrowRight className="ml-2 h-5 w-5" />
+                <Link href="https://drive.google.com/file/d/1hDerw6BLrwKZ2Ok2RXmuzgtRyQ4lka8p/view?usp=share_link" target='_blank'>
+                  <ArrowDown className="ml-2 h-5 w-5" /> Resume
                 </Link>
               </Button>
             </div>
