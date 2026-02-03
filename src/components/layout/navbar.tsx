@@ -5,11 +5,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Briefcase, Code, GraduationCap, Mail, UserCircle, FileText } from "lucide-react";
+import { Menu, Briefcase, Code, GraduationCap, Mail, UserCircle, FileText, FlaskConical } from "lucide-react";
 
 const navLinks = [
   { href: "#hero", label: "Home", icon: UserCircle },
   { href: "#experience", label: "Experience", icon: Briefcase },
+  { href: "#research", label: "Research", icon: FlaskConical },
   { href: "#projects", label: "Projects", icon: Code },
   { href: "#skills", label: "Skills", icon: Code },
   { href: "#education", label: "Education", icon: GraduationCap },

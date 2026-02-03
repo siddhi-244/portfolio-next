@@ -2,8 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { resumeData } from '@/constants/resume-data';
-import { Github, Linkedin, Mail, Download, ArrowRight, ArrowUp, ArrowUpDown, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, ArrowRight, ArrowUp, ArrowUpDown, ArrowDown, Twitter } from 'lucide-react';
 import { SectionWrapper } from '@/components/ui/section-wrapper';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function HeroSection() {
   return (
@@ -21,11 +27,26 @@ export function HeroSection() {
               {resumeData.introduction}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button asChild variant="outline" size="lg" className="shadow-lg hover:shadow-accent/30 transition-shadow">
-                <Link href="https://drive.google.com/file/d/1hDerw6BLrwKZ2Ok2RXmuzgtRyQ4lka8p/view?usp=share_link" target='_blank'>
-                  <ArrowDown className="ml-2 h-5 w-5" /> Resume
-                </Link>
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="lg" className="shadow-lg hover:shadow-accent/30 transition-shadow">
+                    <ArrowDown className="mr-2 h-5 w-5" /> Download Resume
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start">
+                  {resumeData.resumes.map((resume, index) => (
+                    <DropdownMenuItem key={index} asChild>
+                      <Link href={resume.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+                        <Download className="mr-2 h-4 w-4" />
+                        <div className="flex flex-col">
+                          <span className="font-medium">{resume.name}</span>
+                          <span className="text-xs text-muted-foreground">{resume.description}</span>
+                        </div>
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
             <div className="flex justify-center md:justify-start space-x-4 pt-4">
               <Link href={resumeData.contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
@@ -36,6 +57,11 @@ export function HeroSection() {
               <Link href={resumeData.contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                  <Button variant="ghost" size="icon" className="text-accent hover:text-primary">
                   <Linkedin className="h-7 w-7" />
+                </Button>
+              </Link>
+              <Link href={resumeData.contact.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile">
+                 <Button variant="ghost" size="icon" className="text-accent hover:text-primary">
+                  <Twitter className="h-7 w-7" />
                 </Button>
               </Link>
               <Link href={`mailto:${resumeData.contact.email}`} aria-label="Email">

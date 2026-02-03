@@ -2,6 +2,7 @@ import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
 import { HeroSection } from '@/components/sections/hero-section';
 import { ExperienceTimeline } from '@/components/sections/experience-timeline';
+import { ResearchSection } from '@/components/sections/research-section';
 import { ProjectShowcase } from '@/components/sections/project-showcase';
 import { SkillsSection } from '@/components/sections/skills-section';
 import { EducationDetails } from '@/components/sections/education-details';
@@ -15,6 +16,7 @@ export default function PortfolioPage() {
       <main className="flex-grow">
         <HeroSection />
         <ExperienceTimeline />
+        <ResearchSection />
         <ProjectShowcase />
         <SkillsSection />
         <EducationDetails />

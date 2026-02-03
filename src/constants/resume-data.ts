@@ -37,6 +37,22 @@ export interface ContactLink {
   iconName: string; // To be mapped to LucideIcon component
 }
 
+export interface ResearchEntry {
+  lab: string;
+  role: string;
+  supervisor: string;
+  location: string;
+  duration: string;
+  description: string;
+  labLink?: string;
+}
+
+export interface ResumeVariant {
+  name: string;
+  url: string;
+  description: string;
+}
+
 export const resumeData = {
   name: "Siddhi Bhanushali",
   jobTitle: "Software Developer",
@@ -48,7 +64,20 @@ export const resumeData = {
     email: "siddhi.bhanushali@outlook.com",
     github: "https://github.com/siddhi-244",
     linkedin: "https://www.linkedin.com/in/siddhi-bhanushali/",
+    twitter: "https://x.com/SiddhiBhan85884",
   },
+  resumes: [
+    {
+      name: "Software/Full-Stack Developer",
+      url: "https://drive.google.com/file/d/12RumrolmOquxcBoVA7B3zZIaphhIeubN/view?usp=share_link",
+      description: "Backend, Full-Stack & Software Development",
+    },
+    {
+      name: "Android Developer",
+      url: "https://drive.google.com/file/d/16k3uqIjaVYAWdBWJ1nVfEAn4oStQccFL/view?usp=share_link",
+      description: "Android & Mobile Development",
+    },
+  ] as ResumeVariant[],
   experience: [
     {
       company: "Sellergize Web Technology Services",
@@ -56,14 +85,11 @@ export const resumeData = {
       location: "Mumbai, India",
       duration: "June 2023 - July 2025",
       achievements: [
-        "Created Crawlmate, an AI-powered web scraping and coupon extraction platform built on Python and Laravel, capable of processing website data from site-specific selectors, reducing manual effort and downsizing the team from 7 to 2 engineers.",
-        "Engineered an OpenAI-based multi-prompt automation platform leveraging Python and prompt engineering to automate content workflows, reducing manual validation effort by nearly 40% while ensuring accurate store categorization.",
-        "Integrated Google Pub/Sub with PHP and Google Cloud SDK to enable asynchronous communication between microservices, enhancing fault isolation and maintaining system resilience under load.",
-        "Developed REST APIs in Go for browser-related services, improving request latency and simplifying feature rollouts through modular service design.",
-        "Built a custom Android browser using Kotlin, Jetpack Compose, and Firefox Extensions, featuring bookmarks, tab groups, downloads, and shopping bag management for an enhanced user experience.",
-        "Established bi-directional communication between native Android (Kotlin) and JavaScript extensions to enable real-time updates such as coupon application and adaptive theming."
+        "Built Crawlmate, an AI-powered web scraping platform using Python and Laravel, reducing team size from 7 to 2 engineers through automation.",
+        "Developed an OpenAI-based content automation platform, cutting manual validation by 40% with smart prompt engineering.",
+        "Created a custom Android browser with Kotlin and Jetpack Compose featuring tab groups, bookmarks, and real-time coupon application via JS bridge.",
       ],
-      skillsUsed: ["Kotlin", "Java", "Python", "PHP", "Golang", "MySQL", "Android", "Jetpack Compose", "Room", "JavaScript", "Google Pub/Sub", "Laravel", "Bootstrap"],
+      skillsUsed: ["Kotlin", "Python", "PHP", "Golang", "Android", "Jetpack Compose", "Laravel", "Google Pub/Sub"],
     },
     {
       company: "Tala",
@@ -71,14 +97,23 @@ export const resumeData = {
       location: "Bengaluru, India",
       duration: "February 2023 - May 2023",
       achievements: [
-        "Secured backend endpoints using Java and Dropwizard.",
-        "Automated cron job deployments with AWS Lambda, improving uptime reliability and reducing manual intervention.",
-        "Authored detailed architectural documentation with flow diagrams to support new engineer onboarding.",
+        "Secured backend endpoints using Java and Dropwizard, and automated cron job deployments with AWS Lambda.",
         "Optimized Razorpay payment integration for smoother transaction processing and improved reliability.",
       ],
-      skillsUsed: ["Java", "Dropwizard", "AWS Lambda", "JDBC", "PostgreSql"],
+      skillsUsed: ["Java", "Dropwizard", "AWS Lambda", "PostgreSQL"],
     },
   ],
+  research: [
+    {
+      lab: "TEA Lab (Technology, Equity, and Accessibility)",
+      role: "Research Assistant",
+      supervisor: "Prof. Maitraye Das",
+      location: "Northeastern University, Boston",
+      duration: "January 2026 – Present",
+      description: "Conducting research on technology, equity, and accessibility to make computing more inclusive for people with disabilities.",
+      labLink: "https://tealab.sites.northeastern.edu/our-team/",
+    },
+  ] as ResearchEntry[],
   projects: [
     {
       name: "Calendar App",
